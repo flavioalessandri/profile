@@ -1,0 +1,331 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    width:100%;
+    height: 100%;
+    background-color: #0F1C2E;
+}
+
+#main{
+    transform:scale(1);
+
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+   transition: all .6s;
+}
+
+
+
+.title {
+    font-size: 30px;
+    color: white;
+    font-family: 'Dosis';
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    padding:0 5px;
+}
+
+#preLoadImage {
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-color: red;
+    transition: all 3s;    
+    z-index: 6; 
+}
+
+.opacityZero {
+    -webkit-animation: myOpacity 3s linear forwards;
+    animation: myOpacity 3s linear forwards;
+    z-index: 0!important;     
+}
+
+#first-section-container>img{
+    /* width: 912px;
+    height: 25137px; */
+    width:100%;
+}
+
+/* -------------------------------------------------------------------------------media query */
+
+/* @media screen and (min-width: 1075px){ */
+.container{
+    width: 100%;
+    margin:40px auto;
+}
+/* PRIMA SEXIONE grafica triangolo */
+.sect{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.first-section{  height: 340px; }
+.second-section { position: relative; bottom: 180px; }
+.third-section {  position: relative; bottom: 300px; left: 10px;}
+
+
+.secText{
+    width: 54%;
+    position: relative;
+    overflow: hidden;    
+    height: 150px;
+    transition: all .2s;
+}
+
+.first-section-text.secText{
+    width: 42%; 
+}
+
+
+
+.first-section-text{ left: 50%; bottom: 410px;}
+.second-section-text{ left: 10%; bottom: 150px; }
+.third-section-text{ left:  35%;; bottom:120px; }
+
+.first-section-text:hover .popup-text-right,
+.third-section-text:hover .popup-text-right,
+.second-section-text:hover .popup-text-left {
+    opacity:1;    
+    animation: myTextPopup .6s;   
+    top:30%;    
+}
+
+.first-section-text:hover .popup-text-right,
+.third-section-text:hover .popup-text-right,
+.second-section-text:hover .popup-text-left { overflow:unset; }
+
+.description{
+    color:white;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    width: 100%;  
+    top: 6%;
+    font-size: 18px;
+    opacity:0;
+    transition: all .3s;
+}
+
+.popup-text-right{ text-align: right;}
+/* .popup-text-left{padding-left: 15px;} */
+
+#first-section-container{
+    height: 513px;
+    width: 912px;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.9);
+    transform-origin: 0 0; 
+    bottom: 100px;
+}
+
+#second-section-container {
+    display: flex;
+    justify-content: flex-end;
+    top:0px;
+    width:100%;
+    height:auto;
+  }
+
+  #third-section-container {
+    display: flex;
+    justify-content: flex-start;
+    top:0px;
+    width:100%;
+    height:auto;
+  }
+
+#first-section-title,
+#second-section-title,
+#third-section-title {
+    position: absolute;            
+    border-bottom: 1px solid white;
+    top: 0px;        
+    width: 100%;
+    transition: all .2s ease-in;
+}
+
+.alignEnd{ text-align: end; }
+
+.underline{
+    animation: opacityTransition .3s;
+    position: absolute;   
+    width:100%;
+    height:2px;    
+    background: linear-gradient(to left, #4E0D0D, #B92020);
+    transition: all .2s ease-in;
+}  
+
+.transitionAnimRight{   
+    animation: transitionRight .6s ease-in;             
+ } 
+
+.transitionAnimLeft{   
+    animation: transitionLeft .6s ease-in;             
+    transition: ease-in;
+}
+
+.hideTransitionAnimRight{   
+    animation: hideTransitionRight .3s ease-in;          
+    opacity:0;
+}
+
+.hideTransitionAnimLeft{   
+    animation: hideTransitionLeft .3s ease-in;             
+    opacity:0;
+}
+
+.transitionUndelineAnimLeft{   
+    animation: transitionLeft .3s ease-in;             
+    transition: ease-in;
+}
+
+@keyframes myOpacity {
+    0% {opacity:1;top: visible;}
+    100%{opacity:0;top: hidden;}
+}
+
+@keyframes myTextPopup {
+    0% {opacity:0; top: 10%;}
+    50% {opacity:1;top:30%;}
+    90% {opacity:1;top:32%;}
+    100%{opacity:1;top:30%;}
+}
+
+@keyframes opacityTransition {
+    0% {opacity:1; }
+    100% {opacity:0;}
+}
+
+@keyframes transitionRight {
+    0% {opacity:0; right: 300px;}
+    100% {opacity:1; right: 0px;}
+}
+
+@keyframes hideTransitionRight {
+    0% {opacity:1; right: 0px;}
+    100% {opacity:0; right: 300px;}
+}
+
+@keyframes transitionLeft {
+    0% {opacity:0; left: 500px;}
+    100% {opacity:1; left: 0px;}
+}
+
+@keyframes hideTransitionLeft {
+    0% {opacity:1; left: 0px;}
+    100% {opacity:0; left: 500px;}
+}
+
+  #first-section-animation {position: absolute; top: 0px; width: 100%; height:auto; }
+  #circleAnim { width: 250px;margin-right: 40px; } 
+  #lineAnim { width: 320px; }
+
+ /* -------------------------------------------------------------------------------media query */
+ @media screen and (min-width: 860px) and (max-width: 1014px){
+}
+ 
+ @media screen and (min-width: 600px) and (max-width: 859px){
+
+    .sect {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #first-section-container{
+        margin: 0 auto;
+        transform: scale(0.7);
+    }
+ }
+
+
+ @media screen and (min-width: 401px) and (max-width: 599px){
+    
+    .sect{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #first-section-container{
+        transform: scale(0.58);
+        overflow:hidden;
+        transform-origin: -50% 0;        
+        left: 30%;
+    }
+
+    .container {
+        width: 100%;
+        margin: 80px 0;
+    }
+
+    
+    .first-section-text{ left: 0; bottom: 550px;}
+    .second-section-text{ left: 0; bottom: 250px; }
+    .third-section-text{ left:  0;; bottom:220px; }
+
+    .secText, .first-section-text.secText{
+        width: 100%;  
+    }
+
+    .popup-text-right,
+    .popup-text-left { 
+        text-align: left;
+        padding:0 5px;
+    }
+
+ }
+
+@media screen and (max-width: 400px){
+
+     .sect{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+    #first-section-container{
+        transform: scale(0.4);
+        overflow:hidden;
+        transform-origin: -33% 0;        
+        left: 50%;
+        bottom:0;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;    
+        padding-top: 80px;    
+    }
+
+    .first-section{  height: 340px; }
+    .second-section { position: relative; bottom: 170px; }
+    .third-section {  position: relative; bottom: 300px; left: 0;}
+    
+    #first-section-animation {position: absolute; top: 0px; width: 100%; height:auto; }
+    #circleAnim { width: 180px; margin: 0 auto; } 
+    #lineAnim { width: 220px; margin: 0 auto; }
+
+    .first-section-text{ left: 0; bottom: 550px;}
+    .second-section-text{ left: 0; bottom: 250px; }
+    .third-section-text{ left:  0;; bottom:220px; }
+
+    .secText, .first-section-text.secText{
+        width: 100%;  
+    }
+
+    .popup-text-right,
+    .popup-text-left { 
+        text-align: left;
+        padding:0 5px;
+    }
+
+
+
+}/* ----------------------------media query
+
