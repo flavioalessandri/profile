@@ -27,7 +27,7 @@ main.addEventListener("click", () => {
         document.getElementById("third").classList.remove('hidden');
 
         if(screen.width<859){
-            offsetY = 100;
+            offsetY = 130;
         } else {
             offsetY = 260;
         }

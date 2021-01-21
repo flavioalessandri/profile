@@ -141,11 +141,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         image.setAttribute("data-frame", "start");    
                         image.setAttribute("data-click", "on");  
                         
-                        triangleTextUnderline.classList.add('hidden'); 
                         clearInterval(nID);  
                     }
                 } , interval );  
-
+                
+                triangleTextUnderline.classList.add('hidden'); 
             }   
 
         }
