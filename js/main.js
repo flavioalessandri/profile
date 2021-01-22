@@ -1,22 +1,21 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
+    var backgroundElement = document.querySelectorAll('.bkgr');
+
+    addListenerMulti(window, 'mousemove touchmove', (ev) => {
+
+        for (let i = 0; i< backgroundElement.length; i++) {
+            
+            backgroundElement[i].style.transform  = `translate(${-ev.clientX/40}px, ${-ev.clientY/40}px)`; 
+            
+            
+        }
+
+    }); 
+
+   
+
     var height=513;
-
-    
-
-
-    // window.addEventListener('resize', () =>{
-    //     console.log("SCREEEN WIDT",screen.width);
-    //     if(screen.width > 1075){
-    //         height=513;
-    //         console.log("height", height);
-    //     } else if (screen.width < 1075){
-    //         height=256.5;
-    //         console.log("height piccolo", height);
-    //     }
-
-    // });
-
 
     var image =  document.getElementById('first-section-animation');
     // parte relativa al caricamento dell'immagine...appena l'immagine si carica allora parte l'animazione
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         .catch(error => console.log("error", error));        
 
     // variabili generali
-    // var height=513;
+
     var tID = null;  //variabile setInterval
     var nID = null; //variabile setInterval
     var main = document.getElementById('main');
@@ -40,24 +39,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const interval = 30;  
 
     main.addEventListener("click", () => { 
-
-        // if(screen.width > 1075){
-        
-        //     height=513;
-        //     console.log("entrato in IF",height);
-        // } else {
     
-        //     height=256.5;
-        //     console.log("entrato in ELSEIF",height);
-        // }
-
-        
-
-        
-
-        document.getElementById("preLoadImage").classList.add('hidden');
-        
-        
+        document.getElementById("preLoadImage").classList.add('hidden');       
         
         if(main.classList.contains('on')) {
 
@@ -66,7 +49,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             document.getElementById("first").classList.remove('hidden');
 
-            
 
             triangleTitle.classList.remove('hidden'); 
             triangleTitle.classList.add('transitionAnimRight');    
@@ -75,7 +57,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             triangleTextUnderline.classList.remove('hidden'); 
             
             var position = -height * currentFrame; 
-            console.log("POSITION", position);
+            // console.log("POSITION", position);
             
             if (image.getAttribute("data-click") === "on") {             
                 
@@ -90,26 +72,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         position = -height *currentFrame;                         
                         currentFrame++;
                         image.setAttribute("data-num" , currentFrame); 
-                        console.log(position);
+                        // console.log(position);
                     } 
                     else if (currentFrame == totFrames )  {                    
                         image.setAttribute("data-frame" , "end");
                         position = -height *currentFrame ;
                         currentFrame--;                    
                         image.setAttribute("data-num" , currentFrame);    
-                        console.log(position);                  
+                        // console.log(position);                  
                     }
                     else if ( currentFrame < totFrames  && currentFrame > 18 &&  (image.getAttribute("data-frame") == "end") ) {
                         position = -height *currentFrame;                                          
                         currentFrame--;
                         image.setAttribute("data-num" , currentFrame); 
-                        console.log(position);
+                        // console.log(position);
                     }    
                     else { 
                         position = position - height;     
                         image.setAttribute("data-frame" , "start");
                         image.setAttribute("data-num" , currentFrame);  
-                        console.log(position);                       
+                        // console.log(position);                       
                     }  
                 } , int );      
             }
@@ -117,7 +99,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         } 
         else { 
             clearInterval(tID);  
-
             if(currentFrame > 10) {
 
              nID = setInterval ( () => { 
@@ -133,8 +114,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         triangleTitle.classList.add('hideTransitionAnimRight');  
 
                     } else {  
-
-
                         main.classList.remove('off');            
                         main.classList.add('on');   
                         image.setAttribute("data-num" , 0);
@@ -146,30 +125,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 } , interval );  
                 
                 triangleTextUnderline.classList.add('hidden'); 
+                                    
             }   
 
         }
 
     });   
-
-    
-    // var sections = document.querySelectorAll('.sect');
-
-    // for (var i=0; i<sections.length; i++){
-    //     sections[i].addEventListener("mouseover", ev => {
-
-    //         console.log(ev.explicitOriginalTarget.attributes[0]);   
-    //     });
-    // }
-    
-   
-
         
 } ,true);
-
-
-
-
 
 
 // funzione asincrona dedicata al caricaemnto dei render nella pagina
@@ -180,6 +143,12 @@ async function loadImage(elem) {
     });
  }
 
- function loggo (){
-     console.log("ewewewewewewewewwewewewewe");
- }
+ function addListenerMulti(element, eventNames, listener) {
+    var events = eventNames.split(' ');
+    for (var i=0, iLen=events.length; i<iLen; i++) {
+      element.addEventListener(events[i], listener, false);
+    }
+  }
+  
+ 
+

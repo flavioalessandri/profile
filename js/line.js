@@ -55,7 +55,7 @@ main.addEventListener("click", () => {
         animation.setSpeed(1);
         animation.play();
         animation.loop = true;
-        console.log(animation);
+        // console.log(animation);
         
         lineTextUnderline.classList.remove('hidden'); 
 
