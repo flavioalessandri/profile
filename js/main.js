@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // parte relativa al caricamento dell'immagine...appena l'immagine si carica allora parte l'animazione
 
     loadImage(image)
-        .then(result => {document.getElementById("preLoadImage").classList.add('opacityZero');
+        .then(result => {
+            document.getElementById("preLoadImage").classList.add('opacityZero');
+            document.querySelector(".spinner").classList.add('opacityZero');
+
                          console.log("l'immagine è", result); })
         .catch(error => console.log("error", error));   
 
