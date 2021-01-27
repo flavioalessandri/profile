@@ -126,14 +126,25 @@ nav{
     height:100vh;
     background: linear-gradient(#14253E,#0A121F );    
     /* background-color: red; */
-    transition: all 3s;    
-    z-index: 6; 
+    transition: opacity .3s;    
+    z-index: 22; 
     top:0;
 }
 
+#preLoadImage>div{
+    position: relative;
+    top:55%;
+    color: white;
+    font-family: 'Dosis';
+    font-weight: 300;
+    font-size:23;
+    text-align: center;
+    transition: opacity .3s;  
+}
+
 .opacityZero {
-    -webkit-animation: myOpacity 3s linear forwards;
-    animation: myOpacity 3s linear forwards;
+    -webkit-animation: myOpacity 1s linear forwards;
+    animation: myOpacity 1s linear forwards;
     z-index: -1!important;     
 }
 
@@ -327,7 +338,8 @@ nav{
     position: absolute;
     top: 50%;    
     left: 50%;
-    z-index: 20;
+    transform: translate(-50%,-50%);
+    z-index: 23;
   } 
   
   .spinner > div {
