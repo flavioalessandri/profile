@@ -31,14 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         document.getElementById("hamburger").addEventListener('click', (ev) => {
 
-            console.log(ev.target);
+            // console.log(ev.target);
 
             if(hamburger.classList.contains('toggleNav')) {
 
                 document.querySelector('.nav-bg').classList.add('closed');
                 document.querySelector('.nav-bg').classList.remove('open');
                 document.querySelector('.nav-content').classList.add('hidden');
-                document.getElementById('header').style.zIndex = "-1";
+                const setTimeout = (()=>{document.getElementById('header').style.zIndex = "-1"; },1000);
+                
 
                 hamburger.classList.remove('toggleNav');                
                 hamburgerAnimation.setDirection(-1);
