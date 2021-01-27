@@ -542,8 +542,8 @@ nav{
     }
 
     .first-section{  height: 340px; }
-    .second-section { position: relative; bottom: 210px; }
-    .third-section {  position: relative; bottom: 300px; left: 0;}
+    .second-section { position: relative; bottom: 230px; }
+    .third-section {  position: relative; bottom: 330px; left: 0;}
     
     #first-section-animation {position: absolute; top: 0px; width: 100%; height:auto; }
     #circleAnim { width: 160px; margin: 0 auto; } 
