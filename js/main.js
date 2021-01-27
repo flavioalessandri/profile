@@ -2,6 +2,7 @@ var image =  document.getElementById('first-section-animation');
 
 loadImage(image)
     .then(result => {
+        alert(loadImage);
         document.getElementById("preLoadImage").classList.add('opacityZero');
         document.querySelector(".spinner").classList.add('opacityZero');
          console.log("l'immagine è", result); })
@@ -172,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // funzione asincrona dedicata al caricaemnto dei render nella pagina
 async function loadImage(elem) {
+    
     return new Promise((resolve, reject) => {
                         elem.onload = () => resolve(elem);
                         elem.onerror = reject;      
