@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // parte relativa al caricamento dell'immagine...appena l'immagine si carica allora parte l'animazione
 
     document.querySelector('.nav-content').addEventListener('click', () => {
+        console.log("CLICK TOGGLE");
         toggleMenuUp(hamburger,hamburgerAnimation );
-    });
+    })
         
     
     document.getElementById("hamburger").addEventListener('click', (ev) => {         
