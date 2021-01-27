@@ -1,12 +1,12 @@
 var image =  document.getElementById('first-section-animation');
 
+setTimeout( () => {
+    document.getElementById("preLoadImage").classList.add('opacityZero');
+    document.querySelector(".spinner").classList.add('opacityZero');
+}, 3000);
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    setTimeout( () => {
-        document.getElementById("preLoadImage").classList.add('opacityZero');
-        document.querySelector(".spinner").classList.add('opacityZero');
-    }, 3000);
     
         // loadImage(image)
         //     .then(result => {
