@@ -381,6 +381,16 @@ nav{
  /* -------------------------------------------------------------------------------media query */
  @media screen and (min-width: 860px) and (max-width: 1014px){
 
+    .popup-text-right,
+    .popup-text-left { 
+        text-align: left;
+        padding:0 5px;
+        opacity:1;    
+        animation: myTextPopup .6s; 
+        transition: all .2s;  
+        top:30%;  
+    }
+
 }
  /* -------------------------------------------------------------------------------media query */
  @media screen and (min-width: 600px) and (max-width: 859px){
@@ -398,6 +408,16 @@ nav{
     #first-section-container{
         margin: 0 auto;
         transform: scale(0.7);
+    }
+
+    .popup-text-right,
+    .popup-text-left { 
+        text-align: left;
+        padding:0 5px;
+        opacity:1;    
+        animation: myTextPopup .6s; 
+        transition: all .2s;  
+        top:30%;  
     }
 
     .title { font-size: 28px;white-space: nowrap;}
@@ -522,16 +542,16 @@ nav{
     }
 
     .first-section{  height: 340px; }
-    .second-section { position: relative; bottom: 220px; }
-    .third-section {  position: relative; bottom: 340px; left: 0;}
+    .second-section { position: relative; bottom: 210px; }
+    .third-section {  position: relative; bottom: 300px; left: 0;}
     
     #first-section-animation {position: absolute; top: 0px; width: 100%; height:auto; }
     #circleAnim { width: 160px; margin: 0 auto; } 
     #lineAnim { width: 180px; margin: 0 auto; }
 
     .first-section-text{ left: 0; bottom: 550px;}
-    .second-section-text{ left: 0; bottom: 220px; }
-    .third-section-text{ left:  0; bottom:190px; }
+    .second-section-text{ left: 0; bottom: 238px; }
+    .third-section-text{ left:  0; bottom:230px; }
 
     .secText, .first-section-text.secText{
         width: 100%;  
