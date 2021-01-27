@@ -27,18 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // parte relativa al caricamento dell'immagine...appena l'immagine si carica allora parte l'animazione
 
-
+    
+    
+    document.getElementById("hamburger").addEventListener('click', (ev) => {
         
-        document.getElementById("hamburger").addEventListener('click', (ev) => {
-
-            // console.log(ev.target);
-
-            if(hamburger.classList.contains('toggleNav')) {
-
-                document.querySelector('.nav-bg').classList.add('closed');
-                document.querySelector('.nav-bg').classList.remove('open');
-                document.querySelector('.nav-content').classList.add('hidden');
-                const setTimeout = (()=>{document.getElementById('header').style.zIndex = "-1"; },1000);
+        // console.log(ev.target);
+        
+        if(hamburger.classList.contains('toggleNav')) {
+            
+            document.querySelector('.nav-bg').classList.add('closed');
+            document.querySelector('.nav-bg').classList.remove('open');
+            document.querySelector('.nav-content').classList.add('hidden');
+            
+            setTimeout(()=>{document.getElementById('header').style.zIndex = "-1"; },1000);
                 
 
                 hamburger.classList.remove('toggleNav');                
