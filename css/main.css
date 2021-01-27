@@ -207,7 +207,10 @@ nav{
     transition: all .3s;
 }
 
-.popup-text-right{ text-align: right;}
+.popup-text-right{ 
+    text-align: center;
+    /* text-align: right; */
+}
 /* .popup-text-left{padding-left: 15px;} */
 
 #first-section-container{
@@ -244,9 +247,10 @@ nav{
     top: 0px;        
     width: 100%;
     transition: all .2s ease-in;
+    text-align: center;
 }
 
-.alignEnd{ text-align: end; }
+.alignEnd{ text-align: center; }
 
 .underline{
     animation: opacityTransition .2s;
@@ -435,7 +439,7 @@ nav{
 
     .popup-text-right,
     .popup-text-left { 
-        text-align: left;
+        text-align: center;
         padding:0 5px;
         opacity:1;    
         animation: myTextPopup .6s; 
@@ -463,9 +467,15 @@ nav{
         transform: scale(0.7);
     }
 
+    #first-section-title,
+#second-section-title,
+#third-section-title {
+    text-align: center;
+}
+
     .popup-text-right,
     .popup-text-left { 
-        text-align: left;
+        text-align: center;
         padding:0 5px;
         opacity:1;    
         animation: myTextPopup .6s; 
@@ -515,6 +525,12 @@ nav{
         right: 50px;   
         top:5px;        
     }
+
+    #first-section-title,
+    #second-section-title,
+    #third-section-title {
+        text-align: center;
+    }
     
     .first-section-text{ left: 0; bottom: 550px;}
     .second-section-text{ left: 0; bottom: 300px; }
@@ -526,7 +542,7 @@ nav{
 
     .popup-text-right,
     .popup-text-left { 
-        text-align: left;
+        text-align: center;
         padding:0 5px;
         opacity:1;    
         animation: myTextPopup .6s; 
@@ -573,7 +589,6 @@ nav{
         top: 10px;
     }
 
-
     #hamburger{
         width:40px;
         height:40px; 
@@ -618,7 +633,7 @@ nav{
     
     .popup-text-right,
     .popup-text-left {
-        text-align: left;  
+        text-align: center;  
         opacity:1;    
         animation: myTextPopup .6s; 
         -webkit-animation: myTextPopup .6s; 
@@ -639,7 +654,5 @@ nav{
         90% {opacity:1;top:24%;}
         100%{opacity:1;top:22%;}
     }
-
-
 }/* ----------------------------media query
 
