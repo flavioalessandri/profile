@@ -613,7 +613,7 @@ nav{
     }
 
     .first-section{  height: 340px; }
-    .second-section { position: relative; bottom: 230px; }
+    .second-section { position: relative; bottom: 235px; }
     .third-section {  position: relative; bottom: 330px; left: 0;}
     
     #first-section-animation {position: absolute; top: 0px; width: 100%; height:auto; }
@@ -621,7 +621,7 @@ nav{
     #lineAnim { width: 180px; margin: 0 auto; }
 
     .first-section-text{ left: 0; bottom: 550px;}
-    .second-section-text{ left: 0; bottom: 238px; }
+    .second-section-text{ left: 0; bottom: 220px; }
     .third-section-text{ left:  0; bottom:230px; }
 
     .secText, .first-section-text.secText{
